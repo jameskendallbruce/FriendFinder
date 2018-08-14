@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+
+    <!-- Borrowing some Bootstrap (which should automatically pull a reset.css) if necessary for grid layout -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- link to jQuery cdn followed by link to the jQuery/Js file I made -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div class="text-secondary mb-3" style="border-bottom: black 2px solid">
+
+            <h1>Quick Survey</h1>
+            <h3>Tell us a little about yourself.</h3>
+            <h3>This shouldn't take more than a few minutes.</h2>
+
+        </div>
+
+        <form>
+
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label" style="font-size:24px">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputName" placeholder="John Doe" style="font-size:24px">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3" style="border-bottom: black 2px solid">
+                    <label for="inputUrl" class="col-sm-2 col-form-label" style="font-size:24px">URL link to a photo of you</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputUrl" placeholder="http://googleorsomething.com/pictureofme" style="font-size:24px">
+                    </div>
+                </div>
+
+            <span style="font-size:24px">1) I'm a ronin. A samurai with no master. Just like Yojimbo...</span>
+            <select class="custom-select custom-select-lg mb-3" id="input1">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">2) ...but like if Yojimbo were a werewolf...</span>
+            <select class="custom-select custom-select-lg mb-3" id="input2">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">3) There is absolutely no reason to suspect that I'm from another dimension.</span>
+            <select class="custom-select custom-select-lg mb-3" id="input3">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">4) I'm an entirely trustworthy paranormal investigator with a license and everything.</span>
+            <select class="custom-select custom-select-lg mb-3" id="input4">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">5) Spielberg is to blame for everything wrong with modern American cinema.</span>
+            <select class="custom-select custom-select-lg mb-3" id="input5">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">6) I frequently identify with Spider-man -- Peter Parker and/or Miles Morales. Both are great characters.</span>.</span>
+            <select class="custom-select custom-select-lg mb-3" id="input6">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">7) I've got the power of god and anime on my side!!</span>
+            <select class="custom-select custom-select-lg mb-3" id="input7">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <span style="font-size:24px">8) You're clearly a huge nerd and I can't believe that I'm doing this.</span>
+            <select class="custom-select custom-select-lg mb-3" id="input8">
+                <span></span>
+                <option selected>Open this select menu</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neither Agree nor Disagree)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </form>
+
+        <span style="font-size:24px">9) Most people are alright.</span>
+        <select class="custom-select custom-select-lg mb-3" id="input9">
+            <span></span>
+            <option selected>Open this select menu</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neither Agree nor Disagree)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <span style="font-size:24px">10) I'm here to find a specific hero that *might* be the answer to my non-mythical kingdom's problems.</span>
+        <select class="custom-select custom-select-lg mb-3" id="input10">
+            <span></span>
+            <option selected>Open this select menu</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neither Agree nor Disagree)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <button data-target="#resultModal" data-toggle="modal" class="btn mb-2 comm text-white bg-secondary" id="submit-btn" style="font-size:24px">Click for Friend Results</button>
+
+        <button data-target="#fiendModal" data-toggle="modal" class="btn mb-2 comm text-white bg-secondary" id="fiend-btn" style="font-size:24px">Click for Fiend Results</button>
+
+    </div>
+
+    <div class="container">
+        <div id="control-panel" style="position:relative; bottom: 5px; margin-top:50px">
+            <a href="/">Return Home</a>
+            <span> | </span>
+            <a href="/api/friends">API Friends List</a>
+            <span> | </span>
+            <a href="https://github.com/jameskendallbruce/FriendFinder">GitHub Repo</a>
+        </div>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Your New Best Friend!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body content-center">
+            <h5 id="friendNameResult"></h5>
+            <h3 id="error-text">Sure seems like you missed an input. Try again.</h3>
+            <img id="friendImgResult" src="" class="img-responsive" style="max-width:300px">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Fiend Modal -->
+    <div class="modal fade" id="fiendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content"  style="background: black">
+            <div class="modal-header">
+              <h3 class="modal-title" style="color: red">Your New Arch Fiend!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body content-center">
+                <h5 id="fiendNameResult" style="color: red"></h5>
+                <h3 id="error-fiend" style="display:none" style="color: red">Sure seems like you missed an input. Try again.</h3>
+                <img id="fiendImgResult" src="" class="img-responsive" style="max-width:300px">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color: red">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  <!-- gots to have some javascript -->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // on click event for the submit button
+            $("#submit-btn").on('click', function() {
+                event.preventDefault();
+            
+                function validateForm() {
+                    var valid = true;
+                    $("input").each(function(){
+                        if($(this).val() === "") {
+                            valid = false;
+                        $("#error-text").show();
+                        }
+                    });
+                    $("select").each(function() {
+                        if($(this).val() === "Open this select menu") {
+                            valid = false;
+                        $("#error-text").show();                            
+                        }
+                        else {
+                            valid = true;
+                            $("#error-text").hide();
+                        }
+                    });
+                    return valid;
+                }
+            
+                if (validateForm() === true) {
+                        var userInput = {
+                        name: $("#inputName").val().trim(),
+                        url: $("#inputUrl").val().trim(),
+                        scores: [
+                            $("#input1").val().trim(),
+                            $("#input2").val().trim(),
+                            $("#input3").val().trim(),
+                            $("#input4").val().trim(),
+                            $("#input5").val().trim(),
+                            $("#input6").val().trim(),
+                            $("#input7").val().trim(),
+                            $("#input8").val().trim(),
+                            $("#input9").val().trim(),
+                            $("#input10").val().trim(),
+                        ]
+                    };
+
+                        
+                    $.post("/api/friends", userInput, function(data) {
+                        $("#friendNameResult").text(data.name);
+                        $("#friendImgResult").attr("src", data.url);
+
+                    })
+                }
+                validateForm();
+                 
+            });
+
+            // alternate function for finding an archnemesis
+                        // on click event for the submit button
+            $("#fiend-btn").on('click', function() {
+                event.preventDefault();
+            
+                function validateForm() {
+                    var valid = false;
+                    $("input").each(function(){
+                        if($(this).val() === "") {
+                            valid = false;
+                        $("#error-fiend").show();
+                        $("#error-fiend").css("color", "red")
+                        }
+                    });
+                    $("select").each(function() {
+                        if($(this).val() === "Open this select menu") {
+                            valid = false;
+                        $("#error-fiend").show();
+                        $("#error-fiend").css("color", "red")                            
+                        }
+                        else {
+                            valid = true;
+                            $("#error-fiend").hide();
+                        }
+                    });
+                    return valid;
+                }
+            
+                if (validateForm() === true) {
+                        var userInput = {
+                        name: $("#inputName").val().trim(),
+                        url: $("#inputUrl").val().trim(),
+                        scores: [
+                            $("#input1").val().trim(),
+                            $("#input2").val().trim(),
+                            $("#input3").val().trim(),
+                            $("#input4").val().trim(),
+                            $("#input5").val().trim(),
+                            $("#input6").val().trim(),
+                            $("#input7").val().trim(),
+                            $("#input8").val().trim(),
+                            $("#input9").val().trim(),
+                            $("#input10").val().trim(),
+                        ]
+                    };
+
+                        
+                    $.post("/api/friends", userInput, function(data) {
+                        $("#fiendNameResult").text(data.fiend);
+                        $("#fiendImgResult").attr("src", data.fiendUrl);
+
+                    })
+                }
+                validateForm();
+                 
+            });
+        });
+    </script>
+
+</body>
+</html>
